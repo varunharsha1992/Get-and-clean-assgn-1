@@ -18,28 +18,28 @@ given by subject_train.txt and subject_test.txt, and training and test set label
 
 ## Part 2 and 3
 
-1. To subset the variables from the dataset, first the features set (features.txt) was loaded.(14,15 lines)
+1. To subset the variables from the dataset, first the features set (features.txt) was loaded.(15,16 lines)
 
 2. Next, regular expressions were used to figure out the column indices which contained mean and standard deviation
-calculations(given by mean() and std()).(16,17 lines)
+calculations(given by mean() and std()).(17,18 lines)
 
 3. These indices were used to subset from the finalDat set and the feature set so the final data now contains only mean
-and std mesuring variables.(18,19 lines)
+and std mesuring variables.(19,20 lines)
 
-4. Next, to name the columns of the data, the resultant feature set after subsetting was used(line 20).
+4. Next, to name the columns of the data, the resultant feature set after subsetting was used(line 22).
 
 ## Part 4
 
 For this part, activity labels file was loaded which contained the names of the acivities and it was used as the
-levels of the activity column of the data set (lines 22 and 23)
+levels of the activity column of the data set (lines 24 - 26)
 
 ## Part 5
 
-1. for finding the mean subject and activity wise, first the frame was split on basis of subject and activities(line 25)
+1. for finding the mean subject and activity wise, first the frame was split on basis of subject and activities(line 29)
 
-2. Column means of the respective columns(except 67 and 68) were found and then coerced with subject and acitvity(line 26)
+2. Column means of the respective columns(except 67 and 68) were found and then coerced with subject and acitvity(line 30)
 Due to the coercion, numerics were changed into characters which is rectified later
 
-3. Then using **do.call("rbind",list)**, the list was corced into matrix and then converted to a data frame(lines 26 and 27)
+3. Then using **do.call("rbind",list)**, the list was corced into matrix and then converted to a data frame(lines 31 and 32)
 
-4. Then finally the columns of the data frame, which were changed into characters during coercion were changed back to numeric.(the for loop lines 29 to 31 ) 
+4. Then finally the columns of the data frame, which were changed into characters during coercion were changed back to numeric.(the for loop lines 33 to 35 ) 
